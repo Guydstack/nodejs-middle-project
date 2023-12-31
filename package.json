@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vite --host",
-    "build": "vite build", 
-    "postbuild":"node copyFile", 
-    "preview": "vite preview"
+    "start": "nodemon app"
   },
   "author": "",
   "license": "ISC",

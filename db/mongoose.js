@@ -1,5 +1,6 @@
 require('dotenv').config();
 const mongoose = require("mongoose");
+console.log('MongoDB URI:', process.env.MONGODB_URI);
 
 const uri = process.env.DATABASE_URL;
 

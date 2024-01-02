@@ -1,3 +1,5 @@
+//יצרנו אינטרקציה עם מודול שמטפל במשתנים סביבתיים
+require('dotenv').config();
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -5,8 +7,6 @@ const path = require("path");
 
 //מוסיף מאפיין של cookie לבקשת HTTP
 const cookieParser = require('cookie-parser');
-//יצרנו אינטרקציה עם מודול שמטפל במשתנים סביבתיים
-require('dotenv').config();
 //מודול שדואג שכל בקשה שתשלח אל השרת תתקבל
 const cors = require('cors');
 //מייבא את הקובץ קונפגיורציה של המסד נתונים

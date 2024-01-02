@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const uri = process.env.DATABASE_URL;
+const uri = 'mongodb+srv://dahannaturedesign:Epz2WBru5Swz6ak8@cluster0.sbnnh2t.mongodb.net/Resturant';
 
 async function main() {
   try {

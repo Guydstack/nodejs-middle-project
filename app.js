@@ -1,6 +1,5 @@
 //יצרנו אינטרקציה עם מודול שמטפל במשתנים סביבתיים
 require('dotenv').config();
-console.log('Environment Variables:', process.env);
 const express = require("express");
 const app = express();
 const path = require("path");

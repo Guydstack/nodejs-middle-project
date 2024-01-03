@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
 exports.sendEmailToUser = (_to,userName) => {
 
     const mail = {
-      from: "dahan.nature.design@gmail.com",
+      from: process.env.SERVICE_GMAIL_EMAIL,
       to: _to,
       subject: "Thank you for registering with Bali resturant",
       html: sendUserMail(userName)

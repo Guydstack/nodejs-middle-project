@@ -85,9 +85,10 @@ module.exports = {
     user_name,
     premission
   }
+      console.log(payload);
 
   const token = jwt.sign(payload,process.env.JWT_SECRET,{expiresIn:1000 * 60 * 60});
-
+console.log(token);
   res.cookie("token",token);
 
   return res.status(200).json({

@@ -1,6 +1,7 @@
 //יצרנו אינטרקציה עם מודול שמטפל במשתנים סביבתיים
 require('dotenv').config();
 const express = require("express");
+const https = require('https');
 const app = express();
 const path = require("path");
 
@@ -22,6 +23,7 @@ const orders_router = require("./routes/orders");
 app.use(
   cors({
     credentials: true,
+    origin: '*',
   })
 );
 app.use(express.json());

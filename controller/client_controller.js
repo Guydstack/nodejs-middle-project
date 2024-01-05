@@ -91,7 +91,7 @@ module.exports = {
 console.log(token);
       
 res.cookie("token", token, {
-  // httpOnly: true, // The cookie is not accessible via JavaScript
+  httpOnly: false, // The cookie is not accessible via JavaScript
   sameSite: "None", // Allow cross-origin cookies
   secure: true, // Requires HTTPS
 });

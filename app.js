@@ -20,7 +20,10 @@ const workers_router = require("./routes/workers");
 const events_router = require("./routes/events");
 const orders_router = require("./routes/orders");
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://bali-resturant.onrender.com/login.html',
+  credentials: true,
+}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "client")));
 app.use(express.static(path.join(__dirname, "public/uploads")));

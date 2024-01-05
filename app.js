@@ -19,7 +19,13 @@ const workers_router = require("./routes/workers");
 const events_router = require("./routes/events");
 const orders_router = require("./routes/orders");
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://nodejs-middle-project.onrender.com',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "client")));
 app.use(express.static(path.join(__dirname, "public/uploads")));

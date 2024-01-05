@@ -20,7 +20,7 @@ const events_router = require("./routes/events");
 const orders_router = require("./routes/orders");
 
 const corsOptions = {
-  origin: 'https://nodejs-middle-project.onrender.com',
+  origin: 'https://bali-resturant.onrender.com',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 };

@@ -21,7 +21,7 @@ const events_router = require("./routes/events");
 const orders_router = require("./routes/orders");
 
 app.use(cors({
-  origin: 'onrender.com',
+  origin: /\.onrender\.com$/, // Allows all subdomains under onrender.com
   credentials: true,
 }));
 

@@ -92,6 +92,7 @@ module.exports = {
 res.cookie("token", token, {
   sameSite: "None", // Allow cross-origin cookies
   secure: true, // Requires HTTPS
+  domain: ".onrender.com",
 });
 
 console.log('Cookie set:', token);

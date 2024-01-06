@@ -89,10 +89,7 @@ module.exports = {
 
   const token = jwt.sign(payload,process.env.JWT_SECRET,{expiresIn:1000 * 60 * 60});
       
-res.cookie("token", token, {
-  domain: '.onrender.com',
-  path: '/', // Cookie will be sent for all paths
-});
+res.cookie("token", token,);
 
 console.log('Cookie set:', token);
 

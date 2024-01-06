@@ -91,9 +91,8 @@ module.exports = {
       
 res.cookie('token', token, {
   domain: 'onrender.com',
-  httpOnly: true,
   secure: true,
-  sameSite: 'None',
+  sameSite: null,
 });
 console.log('Cookie set:', token);
 

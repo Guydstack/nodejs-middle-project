@@ -91,8 +91,7 @@ module.exports = {
 console.log(token);
       
 res.cookie("token", token, {
-  //httpOnly: true, // The cookie is not accessible via JavaScript
-  domain: https://bali-resturant.onrender.com/index.html,
+  domain: 'onrender.com',
   sameSite: "None", // Allow cross-origin cookies
   secure: true, // Requires HTTPS
 });

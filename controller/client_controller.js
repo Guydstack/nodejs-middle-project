@@ -88,15 +88,14 @@ module.exports = {
       console.log(payload);
 
   const token = jwt.sign(payload,process.env.JWT_SECRET,{expiresIn:1000 * 60 * 60});
-console.log(token);
       
-
-  res.cookie('token', token, {
-  domain: 'bali-resturant.onrender.com',
+res.cookie('token', token, {
+  domain: 'onrender.com',
+  httpOnly: true,
   secure: true,
   sameSite: 'None',
-  path: '/',
 });
+console.log('Cookie set:', token);
 
 
   return res.status(200).json({

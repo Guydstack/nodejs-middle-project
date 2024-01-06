@@ -24,6 +24,12 @@ app.use(cors({
   origin: 'https://bali-resturant.onrender.com',
   credentials: true,
 }));
+
+app.use(cors({
+  origin: 'https://nodejs-middle-project-client.onrender.com',
+  credentials: true,
+}));
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "client")));
 app.use(express.static(path.join(__dirname, "public/uploads")));

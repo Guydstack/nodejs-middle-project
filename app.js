@@ -21,11 +21,6 @@ const events_router = require("./routes/events");
 const orders_router = require("./routes/orders");
 
 app.use(cors({
-  origin: 'https://bali-resturant.onrender.com',
-  credentials: true,
-}));
-
-app.use(cors({
   origin: 'https://nodejs-middle-project-client.onrender.com',
   credentials: true,
 }));

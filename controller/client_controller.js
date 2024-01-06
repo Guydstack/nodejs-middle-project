@@ -92,7 +92,7 @@ console.log(token);
       
 
   res.cookie('token', token, {
-  domain: 'onrender.com',
+  domain: 'bali-resturant.onrender.com',
   secure: true,
   sameSite: 'None',
   path: '/',

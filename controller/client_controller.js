@@ -92,7 +92,7 @@ module.exports = {
 res.cookie("token", token, {
   sameSite: "None",
   secure: process.env.NODE_ENV === 'production', // Use secure attribute only in production
-  domain: 'onrender.com',
+  domain: '.onrender.com',
   path: '/', // Cookie will be sent for all paths
 });
 

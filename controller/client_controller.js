@@ -90,10 +90,18 @@ module.exports = {
   const token = jwt.sign(payload,process.env.JWT_SECRET,{expiresIn:1000 * 60 * 60});
 console.log(token);
       
-res.cookie("token", token, {
+// res.cookie("token", token, {
   sameSite: "None", // Allow cross-origin cookies
   secure: true, // Requires HTTPS
 });
+
+      res.cookie('token', token, {
+  domain: 'onrender.com',
+  secure: true,
+  sameSite: 'None',
+  path: '/',
+});
+
 
   return res.status(200).json({
     success:true,

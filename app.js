@@ -20,10 +20,17 @@ const workers_router = require("./routes/workers");
 const events_router = require("./routes/events");
 const orders_router = require("./routes/orders");
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://bali-resturant.onrender.com'); // Replace with your frontend domain
+  res.header('Access-Control-Allow-Credentials', true);
+  next();
+});
+
 app.use(cors({
   origin: /\.onrender\.com$/, // Allows all subdomains under onrender.com
   credentials: true,
 }));
+
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "client")));

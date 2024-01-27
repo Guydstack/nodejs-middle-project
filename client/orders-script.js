@@ -65,6 +65,7 @@ function submitOrder(id, price, userId) {
             throw new Error(`Failed to update the JSON file. Status: ${response.status}, ${response.statusText}`);
         }
         document.getElementById('myForm').reset();
+        console.log(returnUserId,productId);
         getUserOrders(returnUserId,productId)
     })
     .catch(error => {
@@ -123,13 +124,13 @@ async function fetchUserInfo() {
     try {
         const response = await fetch('https://nodejs-middle-project.onrender.com/orders/all');
         const data = await response.json();
-
+        console.log(data);
         if (data.success) {
             // Filter orders based on userId
             const filteredOrders = data.orders.filter((order) => {
               return order.user._id === userId && order.products.some(product => product._id === productId);
           });
-
+            console.log(filteredOrders);
           const lastProductOrder = filteredOrders[filteredOrders.length - 1];
             console.log(lastProductOrder);
 
